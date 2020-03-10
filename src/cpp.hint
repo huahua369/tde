@@ -1,0 +1,2 @@
+#define TD_API __declspec(dllexport)
+#define TD_API __declspec(dllimport)
