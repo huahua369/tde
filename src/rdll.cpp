@@ -236,24 +236,16 @@ void rd_t::writedll(HANDLE hProcess, const wchar_t* lpszDll)
 }
 #if 0
 typedef void(*dcom_init_func)();
+
 int test_run()
 {
-	//MessageBoxA(0, "a", "tsxlsx", MB_OKCANCEL);
-	//auto notepadhandle = FindWindow("tsxlsx", NULL);
-
-	auto tdstr = R"(E:\code\libxlsx\libxlsx\bin\TD.dll)";
-	auto dslib = LoadLibraryA("dsound.dll");
-	auto td = LoadLibraryA(tdstr);
-	//dcom_init_func dcom_init = (dcom_init_func)GetProcAddress(td, "dcom_init");
-	//dcom_init();
-	//rd_t::init("kugou.exe", tdstr);
-	rd_t::init("qq.exe", tdstr);
-	//auto kg=read_json( "akg.json");
-	//printf();
+	auto tdstr = R"(E:\code\c\td\bin\td1.dll)";
+	rd_t::init("notepad.exe", tdstr);
 	while (0)
 	{
-		sleep(1);
+		Sleep(1);
 	}
 	return 0;
 }
+
 #endif
