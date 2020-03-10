@@ -9,8 +9,6 @@
 #include <Tlhelp32.h>
 //#pragma comment(lib,"detours.lib")
 #pragma comment(lib,"Shlwapi.lib")
-void HookOn();
-void HookOff();
 
 static int(WINAPI* OldMesssageBoxA)(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType) = MessageBoxA;
 static int (WINAPI* OldMesssageBoxW)(HWND hWnd, LPCWSTR lpText, LPCWSTR lpCaption, UINT uType) = MessageBoxW;
