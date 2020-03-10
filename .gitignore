@@ -37,3 +37,4 @@
 *.exp
 /src/proj/Debug
 /src/proj/x64
+/src/proj/Release

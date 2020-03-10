@@ -198,8 +198,8 @@ int rd_t::init(std::string pen, std::string dllpath)
 void rd_t::writedll(HANDLE hProcess, const wchar_t* lpszDll)
 {
 	// 向目标进程地址空间写入DLL名称  
-	size_t dwSize;
-	size_t dwWritten;
+	SIZE_T dwSize;
+	SIZE_T dwWritten;
 	dwSize = lstrlenW(lpszDll) + 2;
 	LPVOID lpBuf = VirtualAllocEx(hProcess, NULL, dwSize, MEM_COMMIT, PAGE_READWRITE);
 	if (NULL == lpBuf)

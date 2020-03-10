@@ -75,23 +75,23 @@
     <TargetName>$(ProjectName)32</TargetName>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\libs\;..\libs\tools\curl;..\src\;$(IncludePath)</IncludePath>
-    <OutDir>.\bin\</OutDir>
+    <OutDir>..\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)32d</TargetName>
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\libs\;..\libs\tools\curl;..\src\;$(IncludePath)</IncludePath>
-    <OutDir>.\bin\</OutDir>
+    <OutDir>..\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(ProjectName)d</TargetName>
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>.\bin\</OutDir>
+    <OutDir>..\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)</TargetName>
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>.\bin\</OutDir>
+    <OutDir>..\bin\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -169,26 +169,21 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="td.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dcom.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    <ClCompile Include="..\dcom.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    <ClCompile Include="..\dllmain.cpp" />
+    <ClCompile Include="..\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="rdll.cpp" />
-    <ClCompile Include="td.cpp" />
+    <ClCompile Include="..\rdll.cpp" />
+    <ClCompile Include="..\td.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

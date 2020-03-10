@@ -18,30 +18,19 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="td.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="td.cpp">
+    <ClCompile Include="..\dcom.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="..\dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="..\pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dcom.c">
+    <ClCompile Include="..\rdll.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="rdll.cpp">
+    <ClCompile Include="..\td.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
